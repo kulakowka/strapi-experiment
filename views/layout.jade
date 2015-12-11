@@ -8,9 +8,10 @@ html
       header
         a.sitename(href="/") Sitename
         nav
-          a(href="/") homepage
+          a(href="/404") 404 page
     block content
     block footer
       footer
-        nav
-          a(href="/") homepage
+        = "Created with "
+        a(href="http://strapi.io/")= "Strapi"
+        = " - the next generation framework for Node.js."

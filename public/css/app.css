@@ -19,10 +19,19 @@ header nav {
   margin-left: 20px;
   display: inline-block;
 }
+header nav a{
+  display: inline-block;
+}
+
+header nav a + a {
+  margin-left: 20px;
+}
 
 footer {
   background: #eee;
   padding: 10px 20px;
+  font-size: 13px;
+  color: #444;
 }
 
 
