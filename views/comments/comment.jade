@@ -1,3 +1,9 @@
 .comment
-  a(href="/comment/"+comment.id) id: #{comment.id}
+  a(href=commentPath(comment)) id: #{comment.id}
   .text= comment.text
+  p
+    = "commentUrl: "
+    a(href=commentUrl(comment))= commentUrl(comment)
+  p
+    = "commentPath: "
+    a(href=commentPath(comment))= commentPath(comment)

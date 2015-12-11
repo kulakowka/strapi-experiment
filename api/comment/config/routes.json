@@ -4,14 +4,16 @@
       "controller": "Comment",
       "action": "index",
       "policies": [
-        "isAuthorized"
+        "isAuthorized",
+        "addCommentViewHelpers"
       ]
     },
     "GET /comment/:id": {
       "controller": "Comment",
       "action": "show",
       "policies": [
-        "isAuthorized"
+        "isAuthorized",
+        "addCommentViewHelpers"
       ]
     },
     "POST /comment": {

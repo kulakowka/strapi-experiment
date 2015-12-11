@@ -1,7 +1,7 @@
 {
   "host": "localhost",
   "port": 1337,
-  "frontendUrl": "",
+  "frontendUrl": "http://localhost:1337",
   "reload": {
     "timeout": 1000,
     "workers": 1
