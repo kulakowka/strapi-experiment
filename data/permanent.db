@@ -1,0 +1,962 @@
+{
+  "data": {
+    "comment": [
+      {
+        "text": "test",
+        "html": "<p>test</p>",
+        "createdBy": 1,
+        "updatedBy": 1,
+        "lang": "en",
+        "template": "default",
+        "id": 1,
+        "createdAt": "2015-12-10T17:07:54.388Z",
+        "updatedAt": "2015-12-10T17:08:10.372Z"
+      },
+      {
+        "createdBy": 1,
+        "createdAt": "2015-12-11T01:03:00.678Z",
+        "template": "default",
+        "lang": "en",
+        "text": "It seems like almost every other week there is a new JavaScript library taking the web community by storm! The web community is increasingly vibrant, diverse and is moving rapidly on multiple fronts. It would be an impossible feat to survey every major JavaScript framework and library. Instead,I will share some of the most famous and influential ones for front-end development. So let’s take a look at the top JavaScript web front-end framework, libraries & tools and when to use them.",
+        "html": "<p>It seems like almost every other week there is a new JavaScript library taking the web community by storm! The web community is increasingly vibrant, diverse and is moving rapidly on multiple fronts. It would be an impossible feat to survey every major JavaScript framework and library. Instead,I will share some of the most famous and influential ones for front-end development. So let’s take a look at the top JavaScript web front-end framework, libraries & tools and when to use them.</p>",
+        "updatedBy": 1,
+        "updatedAt": "2015-12-11T01:03:37.635Z",
+        "id": 2
+      }
+    ],
+    "email": [],
+    "upload": [],
+    "role": [
+      {
+        "name": "admin",
+        "id": 1,
+        "createdAt": "2015-12-10T12:44:48.945Z",
+        "updatedAt": "2015-12-10T12:44:48.945Z"
+      }
+    ],
+    "route": [
+      {
+        "name": "POST /email",
+        "policies": [
+          "isAuthorized"
+        ],
+        "controller": "Email",
+        "action": "send",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": true,
+        "id": 1,
+        "createdAt": "2015-12-10T12:44:48.976Z",
+        "updatedAt": "2015-12-11T01:02:44.949Z"
+      },
+      {
+        "name": "POST /upload",
+        "policies": [
+          "addDataCreate",
+          "authenticated"
+        ],
+        "controller": "Upload",
+        "action": "upload",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": true,
+        "id": 2,
+        "createdAt": "2015-12-10T12:44:48.977Z",
+        "updatedAt": "2015-12-11T01:02:44.951Z"
+      },
+      {
+        "name": "GET /user",
+        "policies": [
+          "isAuthorized"
+        ],
+        "controller": "User",
+        "action": "find",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 3,
+        "createdAt": "2015-12-10T12:44:48.978Z",
+        "updatedAt": "2015-12-11T01:02:44.953Z"
+      },
+      {
+        "name": "GET /user/:id",
+        "policies": [
+          "isAuthorized"
+        ],
+        "controller": "User",
+        "action": "findOne",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": true,
+        "id": 4,
+        "createdAt": "2015-12-10T12:44:48.978Z",
+        "updatedAt": "2015-12-11T01:02:44.955Z"
+      },
+      {
+        "name": "POST /user",
+        "policies": [
+          "isAuthorized",
+          "addDataCreate",
+          "deleteRoles"
+        ],
+        "controller": "User",
+        "action": "create",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 5,
+        "createdAt": "2015-12-10T12:44:48.979Z",
+        "updatedAt": "2015-12-11T01:02:44.957Z"
+      },
+      {
+        "name": "PUT /user/:id",
+        "policies": [
+          "isAuthorized",
+          "addDataUpdate",
+          "deleteRoles"
+        ],
+        "controller": "User",
+        "action": "update",
+        "isPublic": false,
+        "registeredAuthorized": true,
+        "contributorsAuthorized": true,
+        "id": 6,
+        "createdAt": "2015-12-10T12:44:48.979Z",
+        "updatedAt": "2015-12-11T01:02:44.960Z"
+      },
+      {
+        "name": "DELETE /user/:id",
+        "policies": [
+          "isAuthorized"
+        ],
+        "controller": "User",
+        "action": "destroy",
+        "isPublic": false,
+        "registeredAuthorized": true,
+        "contributorsAuthorized": true,
+        "id": 7,
+        "createdAt": "2015-12-10T12:44:48.980Z",
+        "updatedAt": "2015-12-11T01:02:44.962Z"
+      },
+      {
+        "name": "POST /user/:parentId/:relation",
+        "policies": [
+          "isAuthorized",
+          "addDataCreate",
+          "userAddOrRemoveRole"
+        ],
+        "controller": "User",
+        "action": "add",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 8,
+        "createdAt": "2015-12-10T12:44:48.980Z",
+        "updatedAt": "2015-12-11T01:02:44.964Z"
+      },
+      {
+        "name": "DELETE /user/:parentId/:relation/:id",
+        "policies": [
+          "isAuthorized",
+          "addDataUpdate",
+          "userAddOrRemoveRole"
+        ],
+        "controller": "User",
+        "action": "remove",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 9,
+        "createdAt": "2015-12-10T12:44:48.981Z",
+        "updatedAt": "2015-12-11T01:02:44.966Z"
+      },
+      {
+        "name": "POST /auth/logout",
+        "policies": null,
+        "controller": "Auth",
+        "action": "logout",
+        "isPublic": true,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 10,
+        "createdAt": "2015-12-10T12:44:48.981Z",
+        "updatedAt": "2015-12-11T01:02:44.968Z"
+      },
+      {
+        "name": "POST /auth/forgot-password",
+        "policies": null,
+        "controller": "Auth",
+        "action": "forgotPassword",
+        "isPublic": true,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 11,
+        "createdAt": "2015-12-10T12:44:48.982Z",
+        "updatedAt": "2015-12-11T01:02:44.970Z"
+      },
+      {
+        "name": "POST /auth/change-password",
+        "policies": null,
+        "controller": "Auth",
+        "action": "changePassword",
+        "isPublic": true,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 12,
+        "createdAt": "2015-12-10T12:44:48.982Z",
+        "updatedAt": "2015-12-11T01:02:44.972Z"
+      },
+      {
+        "name": "POST /auth/local",
+        "policies": null,
+        "controller": "Auth",
+        "action": "callback",
+        "isPublic": true,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 13,
+        "createdAt": "2015-12-10T12:44:48.983Z",
+        "updatedAt": "2015-12-11T01:02:44.975Z"
+      },
+      {
+        "name": "POST /auth/local/register",
+        "policies": null,
+        "controller": "Auth",
+        "action": "register",
+        "isPublic": true,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 14,
+        "createdAt": "2015-12-10T12:44:48.984Z",
+        "updatedAt": "2015-12-11T01:02:44.976Z"
+      },
+      {
+        "name": "GET /auth/:provider/callback",
+        "policies": null,
+        "controller": "Auth",
+        "action": "callback",
+        "isPublic": true,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 15,
+        "createdAt": "2015-12-10T12:44:48.985Z",
+        "updatedAt": "2015-12-11T01:02:44.978Z"
+      },
+      {
+        "name": "GET /dashboard/explorer/:model/count",
+        "policies": [
+          "dashboardToken",
+          "isAuthorized"
+        ],
+        "controller": "Specific function",
+        "action": "",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 16,
+        "createdAt": "2015-12-10T12:44:48.987Z",
+        "updatedAt": "2015-12-11T01:02:44.980Z"
+      },
+      {
+        "name": "POST /dashboard/explorer/:model",
+        "policies": [
+          "dashboardToken",
+          "isAuthorized",
+          "addDataCreate"
+        ],
+        "controller": "Specific function",
+        "action": "",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 17,
+        "createdAt": "2015-12-10T12:44:48.990Z",
+        "updatedAt": "2015-12-11T01:02:44.982Z"
+      },
+      {
+        "name": "DELETE /dashboard/explorer/:model/:id",
+        "policies": [
+          "dashboardToken",
+          "isAuthorized"
+        ],
+        "controller": "Specific function",
+        "action": "",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 18,
+        "createdAt": "2015-12-10T12:44:48.992Z",
+        "updatedAt": "2015-12-11T01:02:44.985Z"
+      },
+      {
+        "name": "GET /dashboard/explorer/:model",
+        "policies": [
+          "dashboardToken",
+          "isAuthorized"
+        ],
+        "controller": "Specific function",
+        "action": "",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 19,
+        "createdAt": "2015-12-10T12:44:48.994Z",
+        "updatedAt": "2015-12-11T01:02:44.987Z"
+      },
+      {
+        "name": "GET /dashboard/explorer/:model/:id",
+        "policies": [
+          "dashboardToken",
+          "isAuthorized"
+        ],
+        "controller": "Specific function",
+        "action": "",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 20,
+        "createdAt": "2015-12-10T12:44:48.995Z",
+        "updatedAt": "2015-12-11T01:02:44.989Z"
+      },
+      {
+        "name": "PUT /dashboard/explorer/:model/:id",
+        "policies": [
+          "dashboardToken",
+          "isAuthorized",
+          "addDataUpdate"
+        ],
+        "controller": "Specific function",
+        "action": "",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 21,
+        "createdAt": "2015-12-10T12:44:48.997Z",
+        "updatedAt": "2015-12-11T01:02:44.990Z"
+      },
+      {
+        "name": "GET /dashboard/routes",
+        "policies": [
+          "dashboardToken",
+          "isAuthorized"
+        ],
+        "controller": "Specific function",
+        "action": "find",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 22,
+        "createdAt": "2015-12-10T12:44:48.997Z",
+        "updatedAt": "2015-12-11T01:02:44.993Z"
+      },
+      {
+        "name": "PUT /dashboard/routes",
+        "policies": [
+          "dashboardToken",
+          "isAuthorized"
+        ],
+        "controller": "Specific function",
+        "action": "update",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 23,
+        "createdAt": "2015-12-10T12:44:48.998Z",
+        "updatedAt": "2015-12-11T01:02:44.995Z"
+      },
+      {
+        "name": "GET /dashboard/config",
+        "policies": [
+          "dashboardToken"
+        ],
+        "controller": "Specific function",
+        "action": "index",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": false,
+        "id": 24,
+        "createdAt": "2015-12-10T12:44:48.998Z",
+        "updatedAt": "2015-12-11T01:02:44.996Z"
+      },
+      {
+        "name": "GET /comment/:id",
+        "policies": [
+          "isAuthorized"
+        ],
+        "controller": "Comment",
+        "action": "show",
+        "isPublic": true,
+        "registeredAuthorized": true,
+        "contributorsAuthorized": true,
+        "id": 26,
+        "createdAt": "2015-12-10T12:52:45.233Z",
+        "updatedAt": "2015-12-11T01:02:44.932Z"
+      },
+      {
+        "name": "POST /comment",
+        "policies": [
+          "isAuthorized",
+          "addDataCreate"
+        ],
+        "controller": "Comment",
+        "action": "create",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": true,
+        "id": 27,
+        "createdAt": "2015-12-10T12:52:45.241Z",
+        "updatedAt": "2015-12-11T01:02:44.937Z"
+      },
+      {
+        "name": "PUT /comment/:id",
+        "policies": [
+          "isAuthorized",
+          "addDataUpdate"
+        ],
+        "controller": "Comment",
+        "action": "update",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": true,
+        "id": 28,
+        "createdAt": "2015-12-10T12:52:45.243Z",
+        "updatedAt": "2015-12-11T01:02:44.939Z"
+      },
+      {
+        "name": "DELETE /comment/:id",
+        "policies": [
+          "isAuthorized"
+        ],
+        "controller": "Comment",
+        "action": "destroy",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": true,
+        "id": 29,
+        "createdAt": "2015-12-10T12:52:45.244Z",
+        "updatedAt": "2015-12-11T01:02:44.941Z"
+      },
+      {
+        "name": "POST /comment/:parentId/:relation",
+        "policies": [
+          "isAuthorized",
+          "addDataCreate"
+        ],
+        "controller": "Comment",
+        "action": "add",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": true,
+        "id": 30,
+        "createdAt": "2015-12-10T12:52:45.245Z",
+        "updatedAt": "2015-12-11T01:02:44.944Z"
+      },
+      {
+        "name": "DELETE /comment/:parentId/:relation/:id",
+        "policies": [
+          "isAuthorized",
+          "addDataUpdate"
+        ],
+        "controller": "Comment",
+        "action": "remove",
+        "isPublic": false,
+        "registeredAuthorized": false,
+        "contributorsAuthorized": true,
+        "id": 31,
+        "createdAt": "2015-12-10T12:52:45.246Z",
+        "updatedAt": "2015-12-11T01:02:44.947Z"
+      },
+      {
+        "name": "GET /",
+        "policies": [
+          "isAuthorized"
+        ],
+        "controller": "Comment",
+        "action": "index",
+        "isPublic": true,
+        "registeredAuthorized": true,
+        "contributorsAuthorized": true,
+        "id": 32,
+        "createdAt": "2015-12-11T00:27:21.468Z",
+        "updatedAt": "2015-12-11T01:02:44.929Z"
+      }
+    ],
+    "user": [
+      {
+        "username": "kulakowka",
+        "email": "kulakowka@gmail.com",
+        "lang": "en",
+        "template": "default",
+        "id_ref": "1",
+        "provider": "local",
+        "password": "$2a$10$oWjeSJDnva6ZqA5f0GvuM.YabUcG3iNiWyamrYDrHcJs68v6iuSd.",
+        "id": 1,
+        "createdAt": "2015-12-10T17:06:59.791Z",
+        "updatedAt": "2015-12-10T17:06:59.820Z"
+      }
+    ],
+    "comment_contributors__user_comments": [
+      {
+        "user_comments": 1,
+        "comment_contributors": 1,
+        "id": 1
+      },
+      {
+        "user_comments": 1,
+        "comment_contributors": 2,
+        "id": 2
+      }
+    ],
+    "role_routes__route_roles": [
+      {
+        "role_routes": 1,
+        "route_roles": 1,
+        "id": 1
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 2,
+        "id": 2
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 3,
+        "id": 3
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 4,
+        "id": 4
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 5,
+        "id": 5
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 6,
+        "id": 6
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 7,
+        "id": 7
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 8,
+        "id": 8
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 9,
+        "id": 9
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 10,
+        "id": 10
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 11,
+        "id": 11
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 12,
+        "id": 12
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 13,
+        "id": 13
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 14,
+        "id": 14
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 15,
+        "id": 15
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 26,
+        "id": 17
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 27,
+        "id": 18
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 28,
+        "id": 19
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 29,
+        "id": 20
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 30,
+        "id": 21
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 31,
+        "id": 22
+      },
+      {
+        "role_routes": 1,
+        "route_roles": 32,
+        "id": 23
+      }
+    ],
+    "role_users__user_roles": [
+      {
+        "role_users": 1,
+        "user_roles": 1,
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "comment": {
+      "text": {
+        "type": "text"
+      },
+      "html": {
+        "type": "text"
+      },
+      "createdBy": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "createdBy"
+      },
+      "updatedBy": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "updatedBy"
+      },
+      "lang": {
+        "type": "string"
+      },
+      "template": {
+        "type": "string"
+      },
+      "id_ref": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "email": {
+      "from": {
+        "type": "string"
+      },
+      "to": {
+        "type": "string"
+      },
+      "subject": {
+        "type": "string"
+      },
+      "html": {
+        "type": "string"
+      },
+      "text": {
+        "type": "string"
+      },
+      "sent": {
+        "type": "boolean"
+      },
+      "lang": {
+        "type": "string"
+      },
+      "template": {
+        "type": "string"
+      },
+      "id_ref": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "upload": {
+      "readable": {
+        "type": "boolean"
+      },
+      "domain": {
+        "type": "boolean"
+      },
+      "truncated": {
+        "type": "boolean"
+      },
+      "fieldname": {
+        "type": "string"
+      },
+      "filename": {
+        "type": "string"
+      },
+      "encoding": {
+        "type": "string"
+      },
+      "transferEncoding": {
+        "type": "string"
+      },
+      "mime": {
+        "type": "string"
+      },
+      "mimeType": {
+        "type": "string"
+      },
+      "originalFilenameFormatted": {
+        "type": "string"
+      },
+      "originalFilename": {
+        "type": "string"
+      },
+      "lang": {
+        "type": "string"
+      },
+      "template": {
+        "type": "string"
+      },
+      "id_ref": {
+        "type": "string"
+      },
+      "createdBy": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "createdBy"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "role": {
+      "name": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "route": {
+      "name": {
+        "type": "string"
+      },
+      "policies": {
+        "type": "array"
+      },
+      "controller": {
+        "type": "string"
+      },
+      "action": {
+        "type": "string"
+      },
+      "isPublic": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "registeredAuthorized": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "contributorsAuthorized": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "lang": {
+        "type": "string"
+      },
+      "template": {
+        "type": "string"
+      },
+      "id_ref": {
+        "type": "string"
+      },
+      "provider": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "resetPasswordToken": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "comment_contributors__user_comments": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "comment_contributors": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "comment",
+        "on": "id",
+        "via": "user_comments"
+      },
+      "user_comments": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "user",
+        "on": "id",
+        "via": "comment_contributors"
+      }
+    },
+    "role_routes__route_roles": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "role_routes": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "role",
+        "on": "id",
+        "via": "route_roles"
+      },
+      "route_roles": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "route",
+        "on": "id",
+        "via": "role_routes"
+      }
+    },
+    "role_users__user_roles": {
+      "id": {
+        "primaryKey": true,
+        "unique": true,
+        "autoIncrement": true,
+        "type": "integer"
+      },
+      "role_users": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "role",
+        "on": "id",
+        "via": "user_roles"
+      },
+      "user_roles": {
+        "type": "integer",
+        "foreignKey": true,
+        "references": "user",
+        "on": "id",
+        "via": "role_users"
+      }
+    }
+  },
+  "counters": {
+    "role": {
+      "id": 1
+    },
+    "route": {
+      "id": 33
+    },
+    "role_routes__route_roles": {
+      "id": 24
+    },
+    "comment": {
+      "id": 2
+    },
+    "email": {},
+    "upload": {},
+    "user": {
+      "id": 1
+    },
+    "comment_contributors__user_comments": {
+      "id": 2
+    },
+    "role_users__user_roles": {
+      "id": 1
+    }
+  }
+}

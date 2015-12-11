@@ -1,0 +1,35 @@
+body{
+  font-family: Helvetica;
+}
+
+a{
+  text-decoration: none;
+}
+
+header {
+  background: #eee;
+  padding: 10px 20px;
+}
+
+header a.sitename{
+  font-size: 20px;
+}
+
+header nav {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+footer {
+  background: #eee;
+  padding: 10px 20px;
+}
+
+
+.comment{
+  padding: 15px 20px;
+}
+
+.comment + .comment{
+  border-top: 1px solid #eee;
+}
