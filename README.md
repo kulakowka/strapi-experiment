@@ -1,9 +1,4 @@
-# appName
+# strapi-experiments
 
-A quick description of appName.
+[strapi](strapi.io) - Fast. Reusable. Easy to use. The next generation framework for Node.js.
 
-
-## Resources
-
-* How to contribute: See `CONTRIBUTING.md`
-* License: See `LICENSE.md`
